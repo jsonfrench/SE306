@@ -33,10 +33,9 @@ public class FiniteStateMachine {
 					else {
 						System.out.printf("Wrong input. Enter again.%n"); 
 					}
-					input = Input.fromInteger(number); 				
 				}
+				input = Input.fromInteger(number); 
 			}
-
 				
 			//state transition 
 			switch(state) {
@@ -49,6 +48,7 @@ public class FiniteStateMachine {
 					state = State.STATE_0; 
 					System.out.printf("State: %s%n", state);						
 				}
+				break; 
 			case STATE_1: 
 				if(input == Input.INPUT_0) {
 					state = State.STATE_2; 
@@ -58,6 +58,7 @@ public class FiniteStateMachine {
 					state = State.STATE_0; 
 					System.out.printf("State: %s%n", state);						
 				}
+				break; 
 			case STATE_2: 
 				if(input == Input.INPUT_1) {
 					state = State.STATE_3; 
@@ -67,6 +68,7 @@ public class FiniteStateMachine {
 					state = State.STATE_0; 
 					System.out.printf("State: %s%n", state);						
 				}
+				break; 
 			case STATE_3: 
 				if(input == Input.INPUT_7) {
 					state = State.STATE_4; 
@@ -76,6 +78,7 @@ public class FiniteStateMachine {
 					state = State.STATE_0; 
 					System.out.printf("State: %s%n", state);						
 				}
+				break; 
 			case STATE_4: 
 				state = State.MAX_STATE;
 				System.out.printf("The safe is open!%n");
